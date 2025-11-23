@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<script>
+// Get event type from URL
+const params = new URLSearchParams(window.location.search);
+const eventType = params.get("event");
+
+// Event data
+const events = {
+  rock: {
+    title: "Rock Revolution",
+    artist: "The Electric Hearts",
+    date: "December 15, 2025",
+    venue: "Madison Square Arena",
+    price: "$89",
+    img: "images/gallery1.jpg"
+  },
+  edm: {
+    title: "Electronic Nights",
+    artist: "DJ Pulse",
+    date: "December 20, 2025",
+    venue: "Skyline Festival Grounds",
+    price: "$129",
+    img: "images/gallery2.jpg"
+  },
+  jazz: {
+    title: "Jazz & Soul Evening",
+    artist: "The Midnight Trio",
+    date: "December 28, 2025",
+    venue: "Blue Note Theater",
+    price: "$75",
+    img: "images/gallery3.jpg"
+  }
+};
+
+// Choose event or fallback
+const e = events[eventType] || events.rock;
+
+// Insert event content dynamically
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("event-title").innerText = e.title;
+  document.getElementById("event-artist").innerText = e.artist;
+  document.getElementById("event-date").innerText = e.date;
+  document.getElementById("event-venue").innerText = e.venue;
+  document.getElementById("event-price").innerText = e.price;
+  document.getElementById("event-banner").src = e.img;
+});
+</script>
+
+<section class="page-header">
+  <h1 id="event-title">Loading...</h1>
+  <p id="event-artist">Please wait</p>
+</section>
+
+<section class="event-details container">
+
+  <img id="event-banner" src="" class="details-banner" style="width:100%; border-radius:10px; margin-bottom:20px;">
+
+  <div class="details-content">
+    <h2>Event Information</h2>
+
+    <p><strong>Date:</strong> <span id="event-date"></span></p>
+    <p><strong>Venue:</strong> <span id="event-venue"></span></p>
+    <p><strong>Price:</strong> <span id="event-price"></span></p>
+
+    <button class="btn-primary" onclick="location.href='book-event.php'">
+      Book Tickets
+    </button>
+  </div>
+
+</section>
+
+</body>
+</html>
