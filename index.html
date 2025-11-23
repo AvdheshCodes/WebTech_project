@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concert Ticket Booking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="concert-page">
+
+  <section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="music-icon">♪</div>
+    <h1>Live The Music</h1>
+    <p>Feel the energy. Join the crowd. Experience unforgettable nights.</p>
+   <button class="btn-primary" onclick="location.href='browse-events.html'">
+  🎫 Browse Events
+</button>
+
+  </div>
+</section>
+
+
+    <!-- Featured Concerts -->
+    <section class="concerts-section">
+      <div class="container">
+        <h2>Featured Concerts</h2>
+
+        <div class="concerts-grid">
+
+          <!-- Concert 1 -->
+          <div class="concert-card">
+            <img src="images/gallery1.jpg" />
+            <div class="concert-info">
+              <h3>Rock Revolution</h3>
+              <p class="artist">The Electric Hearts</p>
+              <div class="details">
+                <p>📅 December 15, 2025</p>
+                <p>📍 Madison Square Arena</p>
+              </div>
+              <p class="price">$89</p>
+<button class="btn-book" onclick="location.href='event-details.html'">
+  Book Now
+</button>
+            </div>
+          </div>
+
+          <!-- Concert 2 -->
+          <div class="concert-card">
+            <img src="images/gallery2.jpg" alt="Electronic Nights" />
+            <div class="concert-info">
+              <h3>Electronic Nights</h3>
+              <p class="artist">DJ Pulse</p>
+              <div class="details">
+                <p>📅 December 20, 2025</p>
+                <p>📍 Skyline Festival Grounds</p>
+              </div>
+              <p class="price">$129</p>
+<button class="btn-book" onclick="location.href='event-details.html'">
+  Book Now
+</button>
+            </div>
+          </div>
+
+          <!-- Concert 3 -->
+          <div class="concert-card">
+            <img src="images/gallery3.jpg" alt="Jazz & Soul Evening" />
+            <div class="concert-info">
+              <h3>Jazz & Soul Evening</h3>
+              <p class="artist">The Midnight Trio</p>
+              <div class="details">
+                <p>📅 December 28, 2025</p>
+                <p>📍 Blue Note Theater</p>
+              </div>
+              <p class="price">$75</p>
+<button class="btn-book" onclick="location.href='event-details.html'">
+  Book Now
+</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+      <div class="container">
+        <div class="booking-form">
+          <h2>Quick Ticket Booking</h2>
+          <p class="form-description">Fill in your details to reserve your spot</p>
+
+          <form>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Doe" />
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label>Select Event</label>
+              <select>
+                <option>Choose a concert</option>
+                <option>Rock Revolution - Dec 15</option>
+                <option>Electronic Nights - Dec 20</option>
+                <option>Jazz & Soul Evening - Dec 28</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Number of Tickets</label>
+              <select>
+                <option>Select quantity</option>
+                <option>1 Ticket</option>
+                <option>2 Tickets</option>
+                <option>3 Tickets</option>
+                <option>4 Tickets</option>
+                <option>5+ Tickets</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-submit">🎫 Complete Booking</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Concert Tickets. Experience the best live music events.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
