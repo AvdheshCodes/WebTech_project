@@ -1,0 +1,248 @@
+/* -----------------------------------
+   Global Styles
+----------------------------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #F8F4EC; /* Light cream */
+  color: #43334C; /* Deep purple */
+}
+
+h1, h2, h3, p, label {
+  color: #43334C;
+}
+
+/* -----------------------------------
+   Hero Section (Upgraded)
+----------------------------------- */
+
+.hero {
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(67, 51, 76, 0.75),
+    rgba(67, 51, 76, 0.4)
+  ); /* deep purple fade overlay */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #F8F4EC;
+  max-width: 650px;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.music-icon {
+  font-size: 70px;
+  color: #FF8FB7;
+  margin-bottom: 10px;
+  animation: pop 1.3s ease-in-out infinite alternate;
+}
+
+.hero h1 {
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  padding: 14px 35px;
+  background: linear-gradient(135deg, #FF8FB7, #E83C91);
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(232, 60, 145, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(232, 60, 145, 0.45);
+}
+
+/* Animation */
+@keyframes pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
+
+/* -----------------------------------
+   Featured Concerts
+----------------------------------- */
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.concerts-section h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #E83C91;
+}
+
+.concerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.concert-card {
+  background: #FFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(67, 51, 76, 0.15);
+  transition: 0.3s ease;
+}
+
+.concert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(67, 51, 76, 0.22);
+}
+
+.concert-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.concert-info {
+  padding: 18px;
+}
+
+.artist {
+  color: #FF8FB7;
+  margin-top: -8px;
+  font-weight: 500;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #E83C91;
+  font-size: 18px;
+}
+
+.btn-book {
+  width: 100%;
+  padding: 10px;
+  background: #43334C;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-book:hover {
+  background: #E83C91;
+}
+
+/* -----------------------------------
+   Booking Form
+----------------------------------- */
+.booking-section {
+  background: #FF8FB7;
+  padding: 50px 0;
+  margin-top: 40px;
+  border-top: 5px solid #E83C91;
+}
+
+.booking-form {
+  max-width: 450px;
+  margin: auto;
+  background: #FFF;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(67, 51, 76, 0.18);
+}
+
+.booking-form h2 {
+  text-align: center;
+  color: #E83C91;
+}
+
+.form-description {
+  text-align: center;
+  color: #43334C;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input, 
+form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #FF8FB7;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #E83C91;
+  box-shadow: 0 0 5px rgba(232, 60, 145, 0.4);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #E83C91, #FF8FB7);
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 6px 18px rgba(232, 60, 145, 0.35);
+  transform: translateY(-3px);
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #43334C;
+  color: #F8F4EC;
+  font-size: 14px;
+}
